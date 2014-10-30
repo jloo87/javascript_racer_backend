@@ -1,0 +1,6 @@
+<form action="/player/create" method="post" align='center'>
+  <input name="name" type="text" value=<%=@name%>>
+
+  <button value="submit">Create New Player</button>
+  <%="username is already used" unless @name.class == nil.class%>
+</form>

@@ -1,0 +1,33 @@
+<div>
+  <h1>Welcome to JS Racer!!!</h1>
+  <p>Select player or <a href='/player/create'>create new player</a>.</p>
+  <form action="/game" method="post">
+  <table>
+    <tr>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>Player 1</td>
+      <td><select name="player_1">
+        <%@all_player.each do |p|%>
+        <option value=<%=p.id%>><%=p.name%></option>
+        <%end%>
+        </select>
+        </label>
+      </td>
+    </tr>
+    <tr>
+      <td>Player 2</td>
+      <td><select name="player_2">
+        <%@all_player.each do |p|%>
+        <option value=<%=p.id%>><%=p.name%></option>
+        <%end%>
+        </select>
+        </label>
+      </td>
+    </tr>
+  </table>
+  <button value="submit">Race</button>
+  </form>
+</div>

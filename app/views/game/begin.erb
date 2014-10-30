@@ -1,0 +1,45 @@
+
+<table class="racer_table" >
+    <tr id="player1_strip">
+      <td class="active"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Finishing line</td>
+
+
+
+    </tr>
+    <tr id="player2_strip">
+      <td class="active"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Finishing line</td>
+
+
+    </tr>
+  </table>
+  <a id='restart' href='#'>Play Again</a>
+
+<%@p1 = Player.find(@p1_id)%>
+<%@p2 = Player.find(@p2_id)%>
+
+<script>
+  var p1_name = <%=@p1.name.to_s %>;
+  var p2_name =<%=@p2.name.to_s%>;
+</script>
