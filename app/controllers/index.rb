@@ -41,9 +41,9 @@ get '/game/:player_1/:player_2/:game_id' do
 end
 
 post '/won' do
-  game = Game.find(params[:game_id])
-  game.winner = params[:winner]
-  game.loser = params[:loser]
+  game = Game.find(params[:game])
+  game.winner_id = params[:winner]
+  game.loser_id = params[:loser]
   game.win_time = params[:time]
   game.save
   redirect "/won"

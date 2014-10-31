@@ -21,6 +21,7 @@ $(document).ready(function(){
             $('body').append("<h3>Winner is " + p2_name + "</h3>");
           }
         $("#restart").css('visibility', 'visible');
+        fillAndSubmitHiddenForm(winner,loser);
         }
         else
         {
@@ -57,7 +58,7 @@ $(document).ready(function(){
       };
     });
 
-    function fillAndSubmitHiddenForm(player) {
+    function fillAndSubmitHiddenForm(winner,loser) {
       theForm = document.getElementById( 'realForm' );
       theForm.winner.value = winner;
       theForm.loser.value = loser;
