@@ -39,7 +39,17 @@
 <%@p1 = Player.find(@p1_id)%>
 <%@p2 = Player.find(@p2_id)%>
 
+
+<form id="realForm" style="visibility:hidden" action="/won" method="post">
+      <input name="winner" type="text">
+      <input name="loser" type="text">
+      <input name="time" type="text">
+      <input name="game" type="text" value="<%=game_id%>">
+  </form>
+
 <script>
-  var p1_name = <%=@p1.name.to_s %>;
-  var p2_name =<%=@p2.name.to_s%>;
+  var p1_name ='<%=@p1.name%>';
+  var p2_name ='<%=@p2.name%>';
+  var p1_id ='<%=@p1.id%>';
+  var p2_id ='<%=@p2.id%>';
 </script>

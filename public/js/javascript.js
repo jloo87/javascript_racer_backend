@@ -10,10 +10,14 @@ $(document).ready(function(){
         {
           if (p1_position > p2_position)
           {
+            var winner = p1_id;
+            var loser = p2_id;
             $('body').append("<h3>Winner is " + p1_name + "</h3>");
           }
           else
           {
+            var winner = p2_id;
+            var loser = p1_id;
             $('body').append("<h3>Winner is " + p2_name + "</h3>");
           }
         $("#restart").css('visibility', 'visible');
@@ -52,6 +56,14 @@ $(document).ready(function(){
         }
       };
     });
+
+    function fillAndSubmitHiddenForm(player) {
+      theForm = document.getElementById( 'realForm' );
+      theForm.winner.value = winner;
+      theForm.loser.value = loser;
+      theForm.time.value = $('span').text();
+      theForm.submit();
+    }
 
     $("#restart").click(function() {
       console.log("clicked");
